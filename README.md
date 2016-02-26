@@ -78,4 +78,4 @@ The point being you can deliver different content on the post / page based on di
 
 ####p.s. Dear Developers...
 
-There's some other magic under the hood that isn't documented here (yet.) Please feel free to have a look. If you have any question of comments please use the GitHub issues for this repo. Thanks. 
+There's some bonus magic under the hood that isn't documented here (yet.) Please feel free to have a look. If you have any question of comments please use the GitHub issues for this repo. Thanks. 
