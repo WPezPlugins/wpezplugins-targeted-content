@@ -1,5 +1,5 @@
-#Org: WPezPlugins
-###Product: Targeted Content
+###Org: WPezPlugins
+#Product: Targeted Content
 
 #####Injects content (via a shortcode) from a custom post type (Targeted Content) based on a shortcode atts; that atts can also map to URL query string args. 
 
