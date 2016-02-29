@@ -3,7 +3,7 @@
 Plugin Name: WPezPlugins: Targeted Content
 Plugin URI: https://github.com/WPezPlugins/wpezplugins-targeted-content
 Description: Injects content (via a shortcode) from a custom post type (Targeted Content) based on a shortcode atts; that atts can also map to URL Query args.
-Version: 0.4.0
+Version: 0.4.1
 Author: Mark Simchock for Alchemy United
 Author URI: http://AlchemyUnited.com?utm_source=github&utm_medium=repo&utm_campaign=wpezp-tc
 License: GPLv2+
@@ -14,13 +14,17 @@ Domain Path: /languages
 /*
  * CHANGE LOG
  *
- *  0.4.0 - Thur 25 Feb 2016
+ * 0.4.1 - Mon 29 Feb 2016
+ * -- Changed: Moved options into model
+ * -- Changed: Updated README
+ *
+ * 0.4.0 - Thur 25 Feb 2016
  * -- Added: Namespace'ing
  * -- Changed: Refactored where necessary
  * -- Added: Commenting
  * -- Added: Init'ed on GitHub (finally)
  *
- *  0.3.0 - Fri 12 Feb 2016
+ * 0.3.0 - Fri 12 Feb 2016
  * -- Added: Excerpt to cols
  * -- Changed: Major refactoring. Broken code into smaller specialized classes.
  * -- Added: Settings file to make customization ez :)
@@ -42,8 +46,8 @@ if ( ! function_exists( 'add_action' ) ) {
 }
 
 
-if ( ! class_exists('wpezplugins_targeted_content\options\TC_Options') ) {
-    require('options/wpezplugins-targeted-content-options.php');
+if ( ! class_exists('wpezplugins_targeted_content\model\TC_Options') ) {
+    require('model/wpezplugins-targeted-content-options.php');
 }
 
 if ( ! class_exists('wpezplugins_targeted_content\shared\TC_Shared') ) {
@@ -116,7 +120,7 @@ if ( ! class_exists('wpezplugins_targeted_content\Targeted_Content') ) {
 
         function __construct( $args = array() )
         {
-            $this->_options = new options\TC_Options();
+            $this->_options = new model\TC_Options();
 
             if ( ! is_admin()){
                 $this->_model_frontend = new model\TC_Frontend($this->_options);

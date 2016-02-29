@@ -1,13 +1,13 @@
 <?php
 
-namespace wpezplugins_targeted_content\options;
+namespace wpezplugins_targeted_content\model;
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
     die;
 }
 
-if ( ! class_exists('wpezplugins_targeted_content\options\TC_Options') ) {
+if ( ! class_exists('wpezplugins_targeted_content\model\TC_Options') ) {
 
     class TC_Options
     {
